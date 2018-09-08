@@ -1,6 +1,6 @@
 # dashboard
 
-This assignment is built on React.
+This task is built on React.
 SCSS used for styling.
 
 Babel + Webpack used for precompiling assets.
