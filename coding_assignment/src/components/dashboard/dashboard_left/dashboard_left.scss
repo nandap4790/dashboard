@@ -1,0 +1,134 @@
+@import "../../../stylesheets/base.scss";
+
+.dashboard-left {
+  width: 250px;
+  margin: 0 16px;
+
+  .folders,
+  .categories,
+  .labels {
+    margin-top: 20px;
+    list-style-type: none;
+    color: $dashboard-headers;
+
+    .item {
+      display: flex;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    .icon { margin-right: 10px; }
+
+    .header {
+      font-weight: $font-weight-bold;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+  }
+
+  .folders {
+    .item {
+      border-bottom: 1px solid $dashboard-item-border;
+      padding: 5px 0;
+    }
+  }
+
+  .labels {
+    .tagged {
+      display: flex;
+      flex-wrap: wrap;
+
+      .item {
+        background: $white;
+        border: 1px solid $dashboard-item-border;
+        padding: 5px;
+        font-size: 12px;
+        margin: 0 5px 5px 0;
+      }
+    }
+
+    .icon { margin-right: 5px; }
+  }
+
+  .categories {
+    .item {
+      padding: 5px 0;
+
+      .icon {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+      }
+    }
+
+    .work {
+      .icon { background-color: $primary-green; }
+    }
+
+    .documents {
+      .icon { background-color: $docs; }
+    }
+
+    .social {
+      .icon { background-color: $social; }
+    }
+
+    .advertising {
+      .icon { background-color: $advertising; }
+    }
+
+    .clients {
+      .icon { background-color: $clients; }
+    }
+  }
+
+  .inbox,
+  .sent,
+  .important,
+  .drafts,
+  .trash {
+    .icon:before {
+      font-family: FontAwesome;
+      position: relative;
+    }
+  }
+
+  .inbox {
+    .icon:before { content: "\f01c"; }
+  }
+
+  .sent {
+    .icon:before { content: "\f0e0"; }
+  }
+
+  .important {
+    .icon:before { content: "\f0a3"; }
+  }
+
+  .drafts {
+    .icon:before { content: "\f0f6"; }
+  }
+
+  .trash {
+    .icon:before { content: "\f1f8"; }
+  }
+
+  .labels {
+    .item {
+      .icon:before {
+        content: "\f02b";
+        font-family: FontAwesome;
+        position: relative;
+      }
+    }
+  }
+
+  .compose-email {
+    padding: 10px 0;
+    background-color: $primary-green;
+    color: $white;
+    text-align: center;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}

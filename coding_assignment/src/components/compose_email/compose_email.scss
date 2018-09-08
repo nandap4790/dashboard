@@ -1,0 +1,66 @@
+@import "../../stylesheets/base.scss";
+
+.parent {
+  width: 600px;
+  max-height: 100%;
+  position: fixed;
+  z-index: map-get($zindex, modal);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: $white;
+  box-shadow: 0 0 60px 10px rgba($black, 0.9);
+
+  .email-form {
+    .email-labels {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .close { cursor: pointer; }
+
+    .email-labels,
+    .send-email {
+      background-color: $primary-green;
+      color: $white;
+      padding: 16px;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
+    }
+
+    .send-email {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .to,
+    .cc,
+    .subject {
+      background-color: $white;
+      color: $black;
+      padding: 16px;
+      display: flex;
+
+      input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $very-light-blue;
+        outline: none;
+        margin-left: 20px;
+        font-size: 16px;
+      }
+    }
+
+    .mail-body {
+      padding: 16px;
+
+      .advanced {
+        width: 100%;
+        padding: 0;
+        border: none;
+        height: 250px;
+        outline: none;
+      }
+    }
+  }
+}

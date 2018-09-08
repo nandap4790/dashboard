@@ -1,0 +1,42 @@
+@import "../../../stylesheets/base.scss";
+
+.dashboard-right {
+  flex-grow: 1;
+  background-color: $white;
+  border: 1px solid $dashboard-item-border;
+
+  .mail-list {
+
+    .mail-item {
+      display: flex;
+      padding: 16px;
+      border-bottom: 1px solid $dashboard-item-border;
+      color: $mail-color;
+
+      .checkbox,
+      time,
+      .attachment,
+      .sent-to,
+      .cc {
+        width: 10%;
+      }
+
+      .checkbox {
+        &.hide-checkbox { display: none; }
+      }
+
+      time { text-align: right; }
+
+      .sender { width: 20%; }
+
+      .subject { flex-grow: 3; }
+
+      .body { flex-grow: 5; }
+
+      &.selected-item {
+        background-color: $selected;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}

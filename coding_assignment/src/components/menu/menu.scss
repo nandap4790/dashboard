@@ -1,0 +1,109 @@
+@import "../../stylesheets/base.scss";
+
+.menu-container-parent {
+  width: 250px;
+
+  .profile-info {
+    background-color: $profile-bg;
+    padding: 32px 24px;
+
+    .avatar {
+      background-image: url('https://res.cloudinary.com/teepublic/image/private/s--ESCE6mvk--/t_Preview/b_rgb:191919,c_limit,f_jpg,h_630,q_90,w_630/v1466964985/production/designs/561696_1.jpg');
+      width: 50px;
+      height: 50px;
+      background-size: 100%;
+      border-radius: 50%;
+      margin-bottom:  10px;
+    }
+
+    .name {
+      color: $white;
+      font-weight: $font-weight-bold;
+      margin-bottom: 5px;
+    }
+
+    .profession {
+      color: $profession;
+    }
+  }
+
+  .menu-list,
+  .sub-menu {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .menu-list {
+    background-color: $menu;
+  }
+
+  .item {
+    padding: 16px 24px;
+    color: $item;
+    font-weight: $font-weight-bold;
+
+    &.dashboards,
+    &.layouts,
+    &.graphs,
+    &.mailbox,
+    &.metrics,
+    &.widgets,
+    &.forms,
+    &.app-views {
+      &:before {
+        font-family: FontAwesome;
+        position: relative;
+        margin-right: 10px;
+      }
+    }
+
+    &.forms {
+      &:before { content: "\f044"; }
+    }
+
+    &.dashboards {
+      &:before { content: "\f009"; }
+    }
+
+    &.layouts {
+      &:before { content: "\f219"; }
+    }
+
+    &.graphs {
+      &:before { content: "\f080"; }
+    }
+
+    &.mailbox {
+      &:before { content: "\f0e0"; }
+    }
+
+    &.metrics {
+      &:before { content: "\f200"; }
+    }
+
+    &.widgets {
+      &:before { content: "\f0c3"; }
+    }
+
+    &.app-views {
+      &:before { content: "\f108"; }
+    }
+
+    &.mailbox {
+      background-color: #293846;
+      border-left: 5px solid #19aa8d;
+      color: #fff;
+
+      .sub-menu {
+        margin-top: 10px;
+        .item {
+          color: $item;
+        }
+        .item:first-child {
+          color: #white;
+        }
+      }
+    }
+  }
+}

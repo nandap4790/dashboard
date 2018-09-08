@@ -1,0 +1,114 @@
+@import "../../../../stylesheets/base.scss";
+
+.inbox-top {
+  padding: 16px;
+  border-bottom: 2px solid $very-light-blue;
+
+  .inbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .count {
+      color: $dashboard-headers;
+      font-size: 32px;
+      text-transform: capitalize;
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0;
+
+    .refresh,
+    .view,
+    .important,
+    .trash {
+      cursor: pointer;
+      margin-right: 10px;
+      padding: 10px;
+      border: 1px solid $action-icons;
+      border-radius: 3px;
+
+      &:before {
+        font-family: FontAwesome;
+        position: relative;
+        color: $dashboard-headers;
+      }
+    }
+
+    .refresh {
+      color: $dashboard-headers;
+      &:before {
+        content: "\f021";
+        margin-right: 10px;
+      }
+    }
+
+    .view {
+      &:before { content: "\f06e"; }
+    }
+
+    .important {
+      &:before { content: "\f12a"; }
+    }
+
+    .trash {
+      &:before { content: "\f1f8"; }
+
+      &.hide-trash {
+        display: none;
+      }
+    }
+
+    .action-buttons-left { display: flex; }
+
+    .action-buttons-right {
+      display: flex;
+
+      .prev,
+      .next {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid $action-icons;
+        border-radius: 3px;
+
+        &:before {
+          font-family: FontAwesome;
+          position: relative;
+          color: #676a6c;
+        }
+      }
+
+      .prev {
+        &:before { content: "\f060"; }
+      }
+
+      .next {
+        &:before { content: "\f061"; }
+      }
+    }
+  }
+
+  .search {
+    display: flex;
+
+    .search-email {
+      border: 1px solid $primary-green;
+      padding: 0 10px;
+      width: 250px;
+      outline: none;
+    }
+
+    .search-button {
+      padding: 8px;
+      background-color: $primary-green;
+      color: $white;
+      text-align: center;
+      cursor: pointer;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+}

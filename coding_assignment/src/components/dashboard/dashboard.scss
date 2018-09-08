@@ -1,0 +1,11 @@
+@import "../../stylesheets/base.scss";
+
+.dashboard {
+  flex-grow: 1;
+  background-color: $dashboard-bg;
+
+  .email-dashboard {
+    display: flex;
+    padding: 24px;
+  }
+}
